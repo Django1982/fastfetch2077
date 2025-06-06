@@ -8,3 +8,20 @@
 „Da draußen ist das Netzwerk, das du suchst.“
 „Neon lights never sleep.“
 „404: Motivation not found.“
+„rm -rf /* – weil manchmal hilft nur radikaler Neuanfang.“
+„Wenn du das hier siehst, läuft alles nach Plan. Oder komplett aus dem Ruder.“
+„sudo: The final boss of every Shell.“
+„Backup läuft – aber wohin?“
+„Kein Kaffee, kein Commit.“
+„Nicht jeder Bug ist ein Feature. Aber jeder Admin ist ein Künstler.“
+„Wenn du denkst, es geht nicht schlimmer: Schau in die Logfiles.“
+„Glaube nichts, prüfe alles – vor allem, wenn Leo es schreibt.“
+„Reboot tut gut – aber wer tut’s?“
+„Cloud ist nur jemand anderes Server.“
+„Das einzige, was schneller wächst als meine Logs, ist mein Frust.“
+„sudo make me a sandwich – Permission denied.“
+„Kannst du das Skript fixen? – Klar, aber dann ist es halt meins.“
+„Früher war mehr Lametta. Heute mehr YAML.“
+„Wenn du hier einen Fehler findest, darfst du ihn behalten.“
+„Nichts geht über einen sauberen Prompt. Außer Feierabend.“
+"Seitdem ich das Backup nach /dev/null umgestellt habe, dauert es nur noch 5 Minuten."

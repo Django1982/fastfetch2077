@@ -18,6 +18,9 @@ fi
 # ASCII-Separator in Glow
 SEP="\033[38;5;201m═══════════════════════════════════\033[0m"
 
+# Spaß-Modul aktivieren – für Collector’s Arcade Mode!
+source "$HOME/.config/fastfetch/fastfetch2077_fun.sh"
+
 # Ausgabe mit Glow (lolcat)
 {
   echo "$FFOUT"
