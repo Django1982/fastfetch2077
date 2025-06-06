@@ -5,7 +5,10 @@ REPO_BASE="https://raw.githubusercontent.com/Django1982/fastfetch2077/main"
 BIN_DIR="$HOME/bin"
 CONFIG_DIR="$HOME/.config/fastfetch"
 
-# OS/Arch-Detect
+# --- 1. Verzeichnisse vorab anlegen! ---
+mkdir -p "$BIN_DIR" "$CONFIG_DIR"
+
+# --- 2. Architektur/OS-Erkennung ---
 ARCH=$(uname -m)
 OS=$(grep -E '^ID=' /etc/os-release | cut -d= -f2 | tr -d '"')
 
@@ -17,7 +20,6 @@ case "$ARCH" in
 esac
 
 FF_INSTALLED=0
-# 1. Fastfetch installieren (Debian/Ubuntu)
 if ! command -v fastfetch >/dev/null 2>&1; then
   case "$OS" in
     debian|ubuntu|raspbian)
@@ -56,7 +58,6 @@ else
   FF_INSTALLED=1
 fi
 
-# 2. lolcat installieren (bei Debian/Ubuntu, sonst Hinweis)
 if ! command -v lolcat >/dev/null 2>&1; then
   case "$OS" in
     debian|ubuntu|raspbian)
@@ -81,18 +82,16 @@ if ! command -v lolcat >/dev/null 2>&1; then
   esac
 fi
 
-# 3. Verzeichnisse anlegen
-mkdir -p "$BIN_DIR" "$CONFIG_DIR"
-
-# 4. Repo-Files holen
+# --- 3. Repo-Files holen (jetzt können die Verzeichnisse garantiert befüllt werden) ---
 curl -sL "$REPO_BASE/home/bin/fastfetch2077.sh" -o "$BIN_DIR/fastfetch2077.sh"
 chmod +x "$BIN_DIR/fastfetch2077.sh"
 
 curl -sL "$REPO_BASE/home/config/fastfetch/config.jsonc" -o "$CONFIG_DIR/config.jsonc"
 curl -sL "$REPO_BASE/home/config/fastfetch/quotes.txt" -o "$CONFIG_DIR/quotes.txt"
 
-# 5. MOTD-Skript (optional, abschaltbar per Variable)
+# --- 4. MOTD-Skript (optional) ---
 if [ "${NO_MOTD:-0}" = 0 ]; then
+  sudo mkdir -p /etc/profile.d
   sudo curl -sL "$REPO_BASE/etc/profile.d/fastfetch2077.sh" -o "/etc/profile.d/fastfetch2077.sh"
   sudo chmod +x /etc/profile.d/fastfetch2077.sh
 fi
