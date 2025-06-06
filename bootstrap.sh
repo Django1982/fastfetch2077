@@ -86,6 +86,9 @@ fi
 curl -sL "$REPO_BASE/home/bin/fastfetch2077.sh" -o "$BIN_DIR/fastfetch2077.sh"
 chmod +x "$BIN_DIR/fastfetch2077.sh"
 
+curl -sL "$REPO_BASE/home/bin/fastfetch2077_fun.sh" -o "$BIN_DIR/fastfetch2077_fun.sh"
+chmod +x "$BIN_DIR/fastfetch2077_fun.sh"
+
 curl -sL "$REPO_BASE/home/config/fastfetch/config.jsonc" -o "$CONFIG_DIR/config.jsonc"
 curl -sL "$REPO_BASE/home/config/fastfetch/quotes.txt" -o "$CONFIG_DIR/quotes.txt"
 
