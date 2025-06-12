@@ -2,7 +2,7 @@
 # Fastfetch 2077 Fun-Modul – Gameification, Achievements, Tagesmodi
 
 # --- Tageszeit-Modus ---
-HOUR=$(date +%H)
+HOUR=$(date +%-H)
 MODE="classic"
 if (( HOUR >= 6 && HOUR < 12 )); then
   MODE="morning"
@@ -35,7 +35,7 @@ esac
 echo "$BANNER" | lolcat
 
 # --- Wochentag-Specials ---
-DAY=$(date +%u)  # 1 = Montag, 7 = Sonntag
+DAY=$(date +%-u)  # 1 = Montag, 7 = Sonntag
 SPECIAL=""
 case "$DAY" in
   1) SPECIAL="Montagsmodus: Kaffee intravenös empfohlen." ;;
@@ -82,7 +82,7 @@ fi
 if [[ "$DAY" -eq 1 ]]; then
   add_achievement "Montagsheld – Schon montags gehackt!"
 fi
-if (( HOUR == 4 && $(date +%M) == 20 )); then
+if (( HOUR == 4 && $(date +%-M) == 20 )); then
   add_achievement "420 Mode – Du bist viel zu spät/nachts dran!"
 fi
 
