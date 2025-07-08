@@ -46,6 +46,6 @@ Write-Clippy() {
 # (    )    `)
 #(____(__.___ )'
   if [[ "$CLIPPY_ON" == "1" ]]; then
-    echo -e "\033[1;36m$clippy\n\033[1;35m👾 $MSG\033[0m" | lolcat
+    echo -e "\033[1;36m$clippy\n\033[1;35m📎👾 $MSG\033[0m" | lolcat
   fi
 }
