@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/fastfetch/clippy.sh
+source ~/bin/clippy.sh
 
 # Deine fastfetch config
 CONFIG="$HOME/.config/fastfetch/config.jsonc"

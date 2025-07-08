@@ -38,15 +38,14 @@ clippy_quotes=(
 )
 
 Write-Clippy() {
-  local day_index=$(( $(date +%d) - 1 ))
+  local day_index=$(( $(date +%-d) - 1 ))
   local MSG="${clippy_quotes[ day_index % ${#clippy_quotes[@]} ]}"
-  local clippy='
-   _  _
-  ( `   )_
- (    )    `)
-(____(__.___ )'
+#  local clippy='
+#   _  _
+#  ( `   )_
+# (    )    `)
+#(____(__.___ )'
   if [[ "$CLIPPY_ON" == "1" ]]; then
-    echo -e "\033[1;36m$clippy\n\033[1;35m👾 $MSG\033[0m"
-    # Optional: | lolcat
+    echo -e "\033[1;36m$clippy\n\033[1;35m👾 $MSG\033[0m" | lolcat
   fi
 }
