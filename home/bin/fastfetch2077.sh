@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+source ~/.config/fastfetch/clippy.sh
 
 # Deine fastfetch config
 CONFIG="$HOME/.config/fastfetch/config.jsonc"
@@ -28,3 +29,6 @@ SEP="\033[38;5;201m════════════════════�
 
 # Spaß-Modul aktivieren – für Collector’s Arcade Mode!
 source "$HOME/bin/fastfetch2077_fun.sh"
+
+# Clippy-Skript aufrufen
+Write-Clippy
